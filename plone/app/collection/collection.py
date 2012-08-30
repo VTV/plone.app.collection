@@ -169,5 +169,7 @@ class Collection(document.ATDocument, ObjectManager):
                                                 _mapping['images'].values()))
         return _mapping
 
+    def synContentValues(self):
+        return self.results(batch=False)
 
 atapi.registerType(Collection, PROJECTNAME)
